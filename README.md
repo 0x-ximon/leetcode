@@ -11,7 +11,7 @@ Simon's LeetCode solutions repository.
 5. [x] Hash Table
 6. [x] Recursion
 7. [ ] Sorting
-8. [/] Binary Search
+8. [ ] Binary Search
 9. [ ] Binary Tree
 10. [ ] Trie
 11. [ ] N_ary Tree
