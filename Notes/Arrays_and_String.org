@@ -8,7 +8,7 @@ A two dimensional array is simply a data structure that can be used to store gri
 C++ stores the array internally as a one-dimensional array while Java stores it as a one-dimensional array of M elements, each of which is an array of N elements.
 
 * Introduction to Strings
-A string is just an array of `Unicode Characters`, hence every operation that can be performed on a array can equally be performed on a string but there are some similiarities like the comparison operator can be applied to strings safely on languages like C++ but does not work as expected on Java and JavaScript.
+A string is just an array of `Unicode Characters`, hence every operation that can be performed on an array can equally be performed on a string but there are some similarities like the comparison operator can be applied to strings safely on languages like C++ but does not work as expected on Java and JavaScript.
 
 ** String Search Algorithms
 [[https://en.wikipedia.org/wiki/String-searching_algorithm][String Search]] is a classical problem and a primitive approach would be using a simpler two pointer brute force approach but you can get a better  solution by implementing any of these algorithms.

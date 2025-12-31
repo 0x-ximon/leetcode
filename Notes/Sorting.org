@@ -31,3 +31,17 @@ Given a collection of integers, you can sort the list by proceeding from the sta
 Despite the $O(n^2)$ time complexity, in practice, there are a couple of advantages to insertion sort. For one, it is *a stable* sort. By design of its implementation, we will never swap an element later in the list with an equal element earlier in the list. But more importantly, there are cases where insertion sort may actually be the best sort.
 
 Generally, on almost sorted arrays where the number of inversions is relatively small compared to the size of the array, insertion sort will be quite fast since the number of swaps required will be low on almost sorted arrays. Next, insertion sort can also be the best choice on small arrays.
+
+** Heap Sort
+The core concept of the heap sort involves constructing a heap from our input and repeatedly removing the minimum/maximum element to sort the array. A naive approach to heapsort would start with creating a new array and adding elements one by one into the new array. As with previous sorting algorithms, this sorting algorithm can also be performed in place, so no extra memory is used in terms of space complexity.
+
+The key idea for in-place heapsort involves a balance of two central ideas:
+1. Building a heap from an unsorted array through a “bottom-up heapification” process.
+2. Using the heap to sort the input array.
+
+Heapsort traditionally uses a max-heap to sort the array, although a min-heap also works, but its implementation is a little less elegant.
+
+*** Bottom-up Heapification
+Given an input array, we can represent it as a binary tree. If the parent node is stored at index $i$, the left child will be stored at index $2i + 1$ and the right child at index $2i + 2$ (assuming the indexing starts at 0).
+
+
