@@ -39,9 +39,9 @@ The key idea for in-place heapsort involves a balance of two central ideas:
 1. Building a heap from an unsorted array through a “bottom-up heapification” process.
 2. Using the heap to sort the input array.
 
-Heapsort traditionally uses a max-heap to sort the array, although a min-heap also works, but its implementation is a little less elegant.
+Heap sort traditionally uses a max-heap to sort the array, although a min-heap also works, but its implementation is a little less elegant.
 
-*** Bottom-up Heapification
-Given an input array, we can represent it as a binary tree. If the parent node is stored at index $i$, the left child will be stored at index $2i + 1$ and the right child at index $2i + 2$ (assuming the indexing starts at 0).
+Given an input array, we can represent it as a binary tree.
+- If the parent node is stored at index $i$, the left child will be stored at index $2i + 1$ and the right child at index $2i + 2$ (assuming the indexing starts at 0).
 
-
+The key aspect that makes heapsort better than selection sort is the running time of the algorithm is now $O(NlogN)$. This is a result of the fact that removing the max element from the heap, which is the central operation in the sort is an $O(logN)$ operation, which has to be performed in the worst case $N−1$ times. Note that in-place heapification is an $O(N)$ operation, so it has no impact on the worst-case time complexity of heapsort. In terms of space complexity, since we are treating the input array as a heap and creating no extra space (all operations are in-place), heapsort is $O(1)$.
