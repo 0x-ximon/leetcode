@@ -10,7 +10,7 @@ Given two elements: $a$ and $b$; An ordering relation has two key properties:
 1. Exactly one of the following must be true: $a<b$, $a=b$ or $a>b$ ( [[https://en.wikipedia.org/wiki/Trichotomy_(mathematics)][Law of Trichotomy]] )
 2. If $a<b$ and $b<c$, then $a<c$ ( [[https://en.wikipedia.org/wiki/Transitive_relation][Law of Transitivity]] )
 
-A /sort/ is formally defined as a rearrangement of a sequence of elements that puts all elements into a non-decreasing order based on the ordering relation. An important concept in sorting is *inversions*. An /inversion/ in a sequence is defined as a pair of elements that are out of order with respect to the ordering relation.The more inversions present, the more out of order the list is. In fact, the concept of inversions introduces an alternative definition of sorting: *Given a sequence of elements with n inversions, a sorting algorithm is a sequence of operations that reduces inversions to 0*.
+A /sort/ is formally defined as a rearrangement of a sequence of elements that puts all elements into a non-decreasing order based on the ordering relation. An important concept in sorting is *inversions*. An /inversion/ in a sequence is defined as a pair of elements that are out of order with respect to the ordering relation.The more inversions present, the more "out of order" the list is. In fact, the concept of inversions introduces an alternative definition of sorting: *Given a sequence of elements with n inversions, a sorting algorithm is a sequence of operations that reduces inversions to 0*.
 
 The next important concept in sorting that we will refer back to is the *stability* of sorting algorithms. The key feature of a stable sorting algorithm is that *it will preserve the order of equal elements*.
 
@@ -45,3 +45,34 @@ Given an input array, we can represent it as a binary tree.
 - If the parent node is stored at index $i$, the left child will be stored at index $2i + 1$ and the right child at index $2i + 2$ (assuming the indexing starts at 0).
 
 The key aspect that makes heapsort better than selection sort is the running time of the algorithm is now $O(NlogN)$. This is a result of the fact that removing the max element from the heap, which is the central operation in the sort is an $O(logN)$ operation, which has to be performed in the worst case $N−1$ times. Note that in-place heapification is an $O(N)$ operation, so it has no impact on the worst-case time complexity of heapsort. In terms of space complexity, since we are treating the input array as a heap and creating no extra space (all operations are in-place), heapsort is $O(1)$.
+
+* Non-comparison Based Sorts
+Non-Comparison based sorting algorithms are just as the name implies; they don't require comparisons.
+
+** Counting Sort
+Here is the pseudocode for the algorithm: 
+
+Given an array $A$ with elements that satisfies the properties:
+1. Each element of $A$ is between $0$ and $N-1$ inclusive $(0 <= A[i] <= N - 1)$.
+2. No element is repeated.
+3. The array is size $N$ (all elements from $0$ to $N-1$ show up exactly once).
+   
+You could sort an array using a single pass by:
+1. Initialize an array $B$ to size $N$.
+2. For every element ~A[i]~:
+       ~B[A[i]]~ = ~A[i]~
+
+The above algorithm is in a sense the simplest form of counting sort. Counting sort is all about using a predefined range of "keys" to construct a sorted output. There are extensions that can be made to counting sort so it can handle more input arrays:
+
+- Counting sort can handle non-unique keys. 
+- Counting sort can handle nonconsecutive keys.
+- Counting sort can handle non-numeric keys as long as they're constrained within the alphabet of constrained size.
+
+*** Case Study
+Suppose Array ~A~ = ~[5, 4, 5, 5, 1, 1, 3]~:
+
+1. Initialize our output array $B$ size to $max(A) + 1$
+2. Count every occurrence of each element ~B[i]~: 
+       ~B[A[i]]~ += 1 
+
+~B~ = ~[0, 2, 0, 1, 1, 3]~
