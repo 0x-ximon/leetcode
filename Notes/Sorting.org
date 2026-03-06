@@ -50,13 +50,13 @@ The key aspect that makes heapsort better than selection sort is the running tim
 Non-Comparison based sorting algorithms are just as the name implies; they don't require comparisons.
 
 ** Counting Sort
-Here is the pseudocode for the algorithm: 
+Here is the pseudocode for the algorithm:
 
 Given an array $A$ with elements that satisfies the properties:
 1. Each element of $A$ is between $0$ and $N-1$ inclusive $(0 <= A[i] <= N - 1)$.
 2. No element is repeated.
 3. The array is size $N$ (all elements from $0$ to $N-1$ show up exactly once).
-   
+
 You could sort an array using a single pass by:
 1. Initialize an array $B$ to size $N$.
 2. For every element ~A[i]~:
@@ -64,7 +64,7 @@ You could sort an array using a single pass by:
 
 The above algorithm is in a sense the simplest form of counting sort. Counting sort is all about using a predefined range of "keys" to construct a sorted output. There are extensions that can be made to counting sort so it can handle more input arrays:
 
-- Counting sort can handle non-unique keys. 
+- Counting sort can handle non-unique keys.
 - Counting sort can handle nonconsecutive keys.
 - Counting sort can handle non-numeric keys as long as they're constrained within the alphabet of constrained size.
 
@@ -72,7 +72,7 @@ The above algorithm is in a sense the simplest form of counting sort. Counting s
 Suppose Array ~A~ = ~[5, 4, 5, 5, 1, 1, 3]~:
 
 1. Initialize our output array $B$ size to $max(A) + 1$
-2. Count every occurrence of each element ~B[i]~: 
-       ~B[A[i]]~ += 1 
+2. Count every occurrence of each element ~B[i]~:
+       ~B[A[i]]~ += 1
 
 ~B~ = ~[0, 2, 0, 1, 1, 3]~
