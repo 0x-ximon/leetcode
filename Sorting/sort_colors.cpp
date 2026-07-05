@@ -3,14 +3,16 @@
 class Solution {
    public:
     void sortColors(std::vector<int>& nums) {
-        for (int i = 0; i < nums.size(); i++) {
-            int m = i;
+        int counts[3] = {0, 0, 0};
+        for (auto index : nums) counts[index]++;
 
-            for (int j = i + 1; j < nums.size(); j++) {
-                if (nums[j] < nums[m]) m = j;
-            }
-
-            std::swap(nums[i], nums[m]);
+        int p = 0;
+        int q = 0;
+        while (q < nums.size()) {
+            while (counts[p] == 0) p++;
+            nums[q] = p;
+            counts[p]--;
+            q++;
         }
     }
 };
