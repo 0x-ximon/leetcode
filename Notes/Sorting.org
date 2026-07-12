@@ -67,3 +67,9 @@ The above algorithm is in a sense the simplest form of counting sort. Counting s
 - Counting sort can handle non-unique keys.
 - Counting sort can handle nonconsecutive keys.
 - Counting sort can handle non-numeric keys as long as they're constrained within the alphabet of constrained size.
+
+** Radix Sort
+A problem we encounter with Counting sort is that it can't easily handle strings where the alphabet size could be unconstrained. Additionally, where the maximum value of the array is extraordinarily large, counting sort will lose its appeal since the additional memory overhead will slow things down. Radix sort is an extension of Counting Sort that solves these problems. There are a couple of variations of Radix sort:
+
+*** Least Significant Digit (LSD) Radix Sort
+The basic principle of LSD Radix sort is to start with the rightmost, least significant, alphanumeric character of each integer or string and perform counting sort on just that character up until the first character. For integers that are shorter in length than the longest integer, a 0 can suffice as a padding while for strings, a special character would have to represent padding.
