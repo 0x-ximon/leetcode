@@ -2,6 +2,13 @@
 
 Simon's LeetCode solutions repository.
 
+## Languages
+
+- Algorithms: Zig
+- Courses: C++
+- Solutions: TypeScript
+- Structures: Rust
+
 ## Training Path
 
 - [x] Arrays 101
