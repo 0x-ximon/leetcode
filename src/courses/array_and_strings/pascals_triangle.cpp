@@ -2,9 +2,6 @@
 
 class Solution {
    public:
-    // Algorithm Analysis
-    //      Time Complexity:     Ο(n*2) Ω(1)
-    //      Space Complexity:    Ο(n*2) Ω(1)
     std::vector<std::vector<int>> generate(int numRows) {
         std::vector<std::vector<int>> result(numRows);
 

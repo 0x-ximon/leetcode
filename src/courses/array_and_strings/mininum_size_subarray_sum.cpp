@@ -2,11 +2,9 @@
 #include <climits>
 #include <vector>
 
-using namespace std;
-
 class Solution {
    public:
-    int minSubArrayLen(int target, vector<int>& nums) {
+    int minSubArrayLen(int target, std::vector<int>& nums) {
         int min = INT_MAX;
         int sum = 0;
 

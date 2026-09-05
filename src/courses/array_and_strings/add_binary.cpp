@@ -1,13 +1,8 @@
 #include <string>
-using namespace std;
 
 class Solution {
-   public:
-    // Algorithm Analysis
-    //      Time Complexity:     Ο(m|n) Ω(m|n)  Θ(m|n)
-    //      Space Complexity:    Ο(1)   Ω(1)    Θ(1)
-    string addBinary(string a, string b) {
-        string result = "";
+    std::string addBinary(std::string a, std::string b) {
+        std::string result = "";
         int c = 0;  // Holds the Current Carry
         int d = 0;  // Holds the Current Digit
 
@@ -40,12 +35,11 @@ class Solution {
             }
 
             // Save the result to the beginning of the string.
-            result = to_string(d) + result;
+            result = std::to_string(d) + result;
         }
 
         // Edge case for when result.size() is greater than max(p, q).
-        if (c == 1)
-            result = to_string(1) + result;
+        if (c == 1) result = std::to_string(1) + result;
 
         return result;
     };

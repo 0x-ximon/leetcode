@@ -3,9 +3,6 @@
 
 class Solution {
    public:
-    // Algorithm Analysis
-    //      Time Complexity:     Ο(n*m) Ω(n*m) Θ(n*m)
-    //      Space Complexity:    Ο(n*m) Ω(n*m) Θ(n*m)
     std::vector<int> findDiagonalOrder(std::vector<std::vector<int>>& mat) {
         std::vector<int> result = {};
         std::map<int, std::vector<int>> diagonals = {};

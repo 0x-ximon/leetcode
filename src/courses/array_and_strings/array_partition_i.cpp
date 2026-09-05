@@ -1,14 +1,9 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std;
-
 class Solution {
    public:
-    // Algorithm Analysis
-    //      Time Complexity:     Ο(nlogn) Ω(nlogn) Θ(nlogn)
-    //      Space Complexity:    Ο(1) Ω(1) Θ(1)
-    int arrayPairSum(vector<int>& nums) {
+    int arrayPairSum(std::vector<int>& nums) {
         int result = 0;
         sort(nums.begin(), nums.end());
 

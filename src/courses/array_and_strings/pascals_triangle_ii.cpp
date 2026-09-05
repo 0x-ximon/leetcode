@@ -1,15 +1,9 @@
 #include <vector>
-#include "../utils/helpers.cpp"
-
-using namespace std;
 
 class Solution {
    public:
-    // Algorithm Analysis
-    //      Time Complexity:     Ο(n*2) Ω(1)
-    //      Space Complexity:    Ο(n*2) Ω(1)
-    vector<int> getRow(int rowIndex) {
-        vector<vector<int>> triangle(rowIndex + 1);
+    std::vector<int> getRow(int rowIndex) {
+        std::vector<std::vector<int>> triangle(rowIndex + 1);
         int rows = triangle.size();
 
         for (int i = 0; i < rows; i++) {
