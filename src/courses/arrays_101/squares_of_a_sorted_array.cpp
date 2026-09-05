@@ -1,18 +1,12 @@
 #include <cstdlib>
 #include <vector>
 
-using namespace std;
-
-// Algorithm Analysis
-//      Time Complexity:     Ο(n) Ω(n) Θ(n)
-//      Space Complexity:    Ο(n) Ω(n) Θ(n)
-
 class Solution {
    public:
-    vector<int> sortedSquares(vector<int>& nums) {
+    std::vector<int> sortedSquares(std::vector<int>& nums) {
         int n = nums.size();
 
-        vector<int> result(n);
+        std::vector<int> result(n);
         int p = 0;
         int q = n - 1;
 

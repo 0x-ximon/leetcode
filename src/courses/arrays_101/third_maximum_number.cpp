@@ -1,23 +1,15 @@
 #include <optional>
 #include <vector>
 
-using namespace std;
-
-// Algorithm Analysis
-//      Time Complexity:     Ο(n) Ω(n) Θ(n)
-//      Space Complexity:    Ο(1) Ω(1) Θ(1)
-
 class Solution {
    public:
-    int thirdMax(vector<int>& nums) {
-        if (nums.size() < 1)
-            return 0;
+    int thirdMax(std::vector<int>& nums) {
+        if (nums.size() < 1) return 0;
 
-        optional<int> max1, max2, max3;
+        std::optional<int> max1, max2, max3;
 
         for (size_t i = 0; i < nums.size(); i++) {
-            if (max1 == nums[i] || max2 == nums[i] || max3 == nums[i])
-                continue;
+            if (max1 == nums[i] || max2 == nums[i] || max3 == nums[i]) continue;
 
             // First Maximum has not been found
             if (!max1.has_value()) {

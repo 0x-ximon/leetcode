@@ -1,14 +1,8 @@
 #include <vector>
 
-using namespace std;
-
-// Algorithm Analysis
-//      Time Complexity:     Ο(nm) Ω(n)
-//      Space Complexity:    Ο(n) Ω(n) Θ(n)
-
 class Solution {
    public:
-    void shiftItems(vector<int>& arr, size_t start) {
+    void shiftItems(std::vector<int>& arr, size_t start) {
         int prev = 0;
 
         for (size_t i = start; i < arr.size(); i++) {
@@ -18,7 +12,7 @@ class Solution {
         }
     }
 
-    void duplicateZeros(vector<int>& arr) {
+    void duplicateZeros(std::vector<int>& arr) {
         size_t n = arr.size();
         size_t i = 0;
 
@@ -27,6 +21,7 @@ class Solution {
                 shiftItems(arr, i + 1);
                 i++;
             }
+
             i++;
         }
     }

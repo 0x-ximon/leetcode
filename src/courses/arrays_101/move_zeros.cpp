@@ -1,15 +1,8 @@
 #include <vector>
-#include "../utils/helpers.cpp"
-
-using namespace std;
-
-// Algorithm Analysis
-//      Time Complexity:     Ο(n) Ω(n) Θ(n)
-//      Space Complexity:    Ο(1) Ω(1) Θ(1)
 
 class Solution {
    public:
-    void moveZeroes(vector<int>& nums) {
+    void moveZeroes(std::vector<int>& nums) {
         int n = nums.size();
         size_t i = 0;
         size_t j = 0;

@@ -1,22 +1,12 @@
 #include <vector>
 
-using namespace std;
-
-// Algorithm Analysis
-//      Time Complexity:     Ο(n) Ω(n) Θ(n)
-//      Space Complexity:    Ο(n) Ω(1)
-
 class Solution {
    public:
-    int findMaxConsecutiveOnes(vector<int>& nums) {
+    int findMaxConsecutiveOnes(std::vector<int>& nums) {
         int n = nums.size();
-
-        if (n == 1) {
-            return nums[0];
-        }
+        if (n == 1) return nums[0];
 
         int max = 0;
-
         int p1 = 0;
         int p2 = 0;
 
@@ -25,17 +15,15 @@ class Solution {
                 int localMax = 0;
 
                 for (p2 = p1; p2 < n; p2++) {
-                    if (nums[p2] == 1) {
+                    if (nums[p2] == 1)
                         localMax++;
-                    } else {
+                    else {
                         p2 = p1;
                         break;
                     }
                 }
 
-                if (localMax > max) {
-                    max = localMax;
-                }
+                if (localMax > max) max = localMax;
             }
 
             p1++;

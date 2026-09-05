@@ -1,20 +1,13 @@
 #include <vector>
-using namespace std;
-
-// Algorithm Analysis
-//      Time Complexity:     Ο(n) Ω(n) Θ(n)
-//      Space Complexity:    Ο(1) Ω(1) Θ(1)
 
 class Solution {
    public:
-    bool validMountainArray(vector<int>& arr) {
+    bool validMountainArray(std::vector<int>& arr) {
         // Check if array length is greater than 3
-        if (arr.size() < 3)
-            return false;
+        if (arr.size() < 3) return false;
 
         // Check if array starts by decreasing
-        if (arr[0] > arr[1])
-            return false;
+        if (arr[0] > arr[1]) return false;
 
         bool increasing = true;
 
