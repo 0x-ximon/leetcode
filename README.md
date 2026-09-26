@@ -4,10 +4,9 @@ Simon's LeetCode solutions repository.
 
 ## Languages
 
-- Algorithms: Zig
 - Courses: C++
-- Solutions: TypeScript
-- Structures: Rust
+- Structures: Zig
+- Solutions: Python
 
 ## Training Path
 

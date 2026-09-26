@@ -1,9 +1,6 @@
 #include <map>
 
-using namespace std;
-
-class Node {
-   public:
+struct Node {
     int val;
     Node* next;
     Node* random;
@@ -18,10 +15,9 @@ class Node {
 class Solution {
    public:
     Node* copyRandomList(Node* head) {
-        if (head == nullptr)
-            return nullptr;
+        if (head == nullptr) return nullptr;
 
-        map<Node*, Node*> old_to_new = {};
+        std::map<Node*, Node*> old_to_new = {};
 
         Node* p = head;
         while (p != nullptr) {

@@ -1,17 +1,14 @@
-class Node {
-   public:
+struct Node {
     int val;
-    Node* prev;
     Node* next;
+    Node* prev;
     Node* child;
 };
 
 class Solution {
    public:
     Node* flatten(Node* head) {
-        if (head == nullptr)
-            return head;
-
+        if (head == nullptr) return head;
         Node* p = head;
 
         while (p != nullptr) {
@@ -30,10 +27,7 @@ class Solution {
 
             // Connect tail with p->next.
             temp->next = p->next;
-
-            if (p->next != nullptr) {
-                p->next->prev = temp;
-            }
+            if (p->next != nullptr) p->next->prev = temp;
 
             p->next = p->child;
             p->child->prev = p;

@@ -1,30 +1,30 @@
-struct ListNode {
-  int val;
-  ListNode* next;
-  ListNode() : val(0), next(nullptr) {}
-  ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode* next) : val(x), next(next) {}
+struct Node {
+    int val;
+    Node* next;
+    Node() : val(0), next(nullptr) {}
+    Node(int x) : val(x), next(nullptr) {}
+    Node(int x, Node* next) : val(x), next(next) {}
 };
 
 class Solution {
- public:
-  ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-    if (!list1) return list2;
-    if (!list2) return list1;
+   public:
+    Node* mergeTwoLists(Node* list1, Node* list2) {
+        if (!list1) return list2;
+        if (!list2) return list1;
 
-    ListNode* head;
-    ListNode* next;
+        Node* head;
+        Node* next;
 
-    if (list1->val <= list2->val) {
-      head = list1;
-      next = mergeTwoLists(list1->next, list2);
-      head->next = next;
-    } else {
-      head = list2;
-      next = mergeTwoLists(list1, list2->next);
-      head->next = next;
+        if (list1->val <= list2->val) {
+            head = list1;
+            next = mergeTwoLists(list1->next, list2);
+            head->next = next;
+        } else {
+            head = list2;
+            next = mergeTwoLists(list1, list2->next);
+            head->next = next;
+        }
+
+        return head;
     }
-
-    return head;
-  }
 };

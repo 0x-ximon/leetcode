@@ -1,18 +1,20 @@
-#include "./Linked_List_Node.cpp"
+#include <cstdint>
+
+struct Node {
+    int val;
+    Node* next;
+    Node* prev;
+};
 
 class Solution {
    public:
-    // Algorithm Analysis
-    //      Time Complexity:    Ο(n)    Ω(n)    Θ(n)
-    //      Space Complexity:   Ο(1)    Ω(1)    Θ(1)
-    ListNode* rotateRight(ListNode* head, int k) {
-        if (head == nullptr)
-            return nullptr;
+    Node* rotateRight(Node* head, int k) {
+        if (head == nullptr) return nullptr;
 
         // Variables for traversing the list.
-        ListNode* p = head;  // New Head
-        ListNode* q = head;  // Holds the tail
-        uint n = 1;
+        Node* p = head;  // New Head
+        Node* q = head;  // Holds the tail
+        uint64_t n = 1;
 
         // Convert list into a bounded list and Get the number of elements in
         // the list.

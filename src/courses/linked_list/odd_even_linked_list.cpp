@@ -1,14 +1,17 @@
-#include "./Linked_List_Node.cpp"
+struct Node {
+    int val;
+    Node* next;
+    Node* prev;
+};
 
 class Solution {
    public:
-    ListNode* oddEvenList(ListNode* head) {
-        if (head == nullptr)
-            return nullptr;
+    Node* oddEvenList(Node* head) {
+        if (head == nullptr) return nullptr;
 
-        ListNode* odd = head;
-        ListNode* even = head->next;
-        ListNode* evenHead = even;
+        Node* odd = head;
+        Node* even = head->next;
+        Node* evenHead = even;
 
         while (even != nullptr && even->next != nullptr) {
             odd->next = odd->next->next;

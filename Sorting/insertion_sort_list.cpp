@@ -1,16 +1,16 @@
-struct ListNode {
+struct Node {
     int val;
-    ListNode* next;
-    ListNode() : val(0), next(nullptr) {};
-    ListNode(int x) : val(x), next(nullptr) {};
-    ListNode(int x, ListNode* next) : val(x), next(next) {};
+    Node* next;
+    Node() : val(0), next(nullptr) {};
+    Node(int x) : val(x), next(nullptr) {};
+    Node(int x, Node* next) : val(x), next(next) {};
 };
 
 class Solution {
    public:
-    ListNode* insertionSortList(ListNode* head) {
+    Node* insertionSortList(Node* head) {
         if (!head || !head->next) return head;
-        auto dummy = new ListNode(0, head);
+        auto dummy = new Node(0, head);
 
         auto curr = head->next;
         auto prev = head;

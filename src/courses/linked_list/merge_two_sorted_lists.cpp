@@ -1,11 +1,14 @@
-
-#include "./Linked_List_Node.cpp"
+struct Node {
+    int val;
+    Node* next;
+    Node* prev;
+};
 
 class Solution {
    public:
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode* p = list1;
-        ListNode* q = list2;
+    Node* mergeTwoLists(Node* list1, Node* list2) {
+        Node* p = list1;
+        Node* q = list2;
 
         if (p == nullptr) {
             return q;

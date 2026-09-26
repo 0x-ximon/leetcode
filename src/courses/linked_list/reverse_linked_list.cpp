@@ -1,11 +1,15 @@
-#include "./Linked_List_Node.cpp"
+struct Node {
+    int val;
+    Node* next;
+    Node* prev;
+};
 
 class Solution {
    public:
-    ListNode* reverseList(ListNode* head) {
-        ListNode* prevNode = nullptr;
-        ListNode* curr = head;
-        ListNode* nextNode = nullptr;
+    Node* reverseList(Node* head) {
+        Node* prevNode = nullptr;
+        Node* curr = head;
+        Node* nextNode = nullptr;
 
         while (curr != nullptr) {
             nextNode = curr->next;

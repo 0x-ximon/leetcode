@@ -1,12 +1,16 @@
-#include "./Linked_List_Node.cpp"
+struct Node {
+    int val;
+    Node* next;
+    Node* prev;
+};
 
 class Solution {
    public:
-    bool isPalindrome(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head;
-        ListNode* prev = nullptr;
-        ListNode* temp = nullptr;
+    bool isPalindrome(Node* head) {
+        Node* slow = head;
+        Node* fast = head;
+        Node* prev = nullptr;
+        Node* temp = nullptr;
 
         while (fast && fast->next) {
             slow = slow->next;

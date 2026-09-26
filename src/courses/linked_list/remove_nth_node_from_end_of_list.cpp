@@ -1,13 +1,18 @@
-#include "./Linked_List_Node.cpp"
+#include <cstddef>
+
+struct Node {
+    int val;
+    Node* next;
+    Node* prev;
+};
 
 class Solution {
    public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
-        if (head == nullptr || head->next == nullptr)
-            return nullptr;
+    Node* removeNthFromEnd(Node* head, int n) {
+        if (head == nullptr || head->next == nullptr) return nullptr;
 
-        ListNode* p = head;
-        ListNode* q = head;
+        Node* p = head;
+        Node* q = head;
 
         for (size_t i = 0; i < n; i++) {
             p = p->next;
