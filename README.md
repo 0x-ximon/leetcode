@@ -1,10 +1,10 @@
-# LeetCode
+# Data Structures & Algorithms
 
-Simon's LeetCode solutions repository.
+Simon's repository for practicing and mastering data structures and algorithms.
 
 ## Languages
 
-- Courses & Solutions: C++
+- Courses & Challenges: C++
 - Structures & Algorithms: Zig
 
 ## Training Path

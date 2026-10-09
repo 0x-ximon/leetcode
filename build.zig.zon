@@ -1,7 +1,7 @@
 .{
-    .name = .leetcode,
+    .name = .dsa,
     .version = "0.0.0",
-    .fingerprint = 0x39d23ebd93fbfcff,
+    .fingerprint = 0x8e38c1154ea62f17,
     .minimum_zig_version = "0.16.0",
     .dependencies = .{},
     .paths = .{
